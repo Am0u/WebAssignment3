@@ -26,6 +26,7 @@
         /* 48px - 108px */
         gap: clamp(3rem, 8vw, 6.75rem);
         position: relative;
+        background-color: var(--background);
     }
     #RPsbs-248 .cs-content,
     #RPsbsr-248 .cs-content {
