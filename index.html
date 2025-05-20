@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Indie+Flower&family=Merienda:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poiret+One&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/cta.css">
+    <link rel="stylesheet" href="css/promotion.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
+
+    <script src="header.js"></script>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+
+
+
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="index.html" class="cs-logo" aria-label="back to home">
+            <img src="images/logo-min.png" alt="logo" class="logo-icon" decoding="async" aria-hidden="true">
+        </a>
+
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="index.html" class="cs-li-link cs-active">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/htmlFiles/aboutUs.html " class="cs-li-link">
+                            About Us
+                        </a>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li">
+                        <a href="/htmlFiles/products.html" class="cs-li-link">
+                            Shop Online
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/htmlFiles/reviews.html" class="cs-li-link">
+                            Reviews
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/htmlFiles/contact.html" class="cs-li-link">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="cs-contact-group">
+            <a href="tel:+61 405 104 934" class="cs-phone">
+                <img class="cs-phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
+                +61 405 104 934
+            </a>
+            <div class="cs-social">
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="https://x.com/planterpots_aus" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="https://www.instagram.com/planterpots.com.au?ref=badge" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="https://www.facebook.com/planterpots.com.au?ref=hl#" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+            </div>
+        </div>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+    </div>
+</header>
+
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-856">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">Create perfect home for your green friends</h1>
+            <p class="cs-text">
+                Transform your home into a green oasis with our wide range of elegant, durable, and eco-friendly pots. Whether you're looking to brighten up your living space or create a cozy corner, we've got the perfect pot for every plant.
+
+                <br>
+                <br>Explore our collection today and find the perfect match for your green friends!
+            </p>
+            <a href="htmlFiles/products.html" class="cs-button-solid">Shop Now</a>
+        </div>
+        <!--Hero Image-->
+        <picture class="cs-picture">
+            <!--Mobile-->
+            <source media="(max-width: 600px)" srcset="images/pots.jpeg">
+            <!--Tablet-->
+            <source media="(min-width: 601px)" srcset="images/pots.jpeg">
+            <!--Desktop-->
+            <source media="(min-width: 1024px)" srcset="images/pots.jpeg">
+            <img aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg" alt="pots" width="570" height="701">
+        </picture>
+    </div>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+
+</section>
+
+
+<!-- ============================================ -->
+<!--                 Promotions                   -->
+<!-- ============================================ -->
+
+<section id="promotions-1567">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="images/potPromo.jpeg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="images/potPromo.jpeg">
+                    <img loading="lazy" decoding="async" src="images/potPromo.jpeg" alt="room" width="630" height="354">
+                </picture>
+                <div class="cs-content">
+                    <span class="cs-tag">On your first purchase</span>
+                    <h2 class="cs-h2">Get an Extra 30% off</h2>
+                    <a href="htmlFiles/products.html" class="cs-button-solid">Shop Now</a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="images/potPromo2.jpeg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="images/potPromo2.jpeg">
+                    <img loading="lazy" decoding="async" src="images/potPromo2.jpeg" alt="room" width="630" height="354">
+                </picture>
+                <div class="cs-content">
+                    <span class="cs-tag">On your 3rd purchase</span>
+                    <h2 class="cs-h2">Buy 2 Items - Get 1 for Free</h2>
+                    <a href="htmlFiles/products.html" class="cs-button-solid">Shop Now</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RPsbs-248">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="images/workshop.jpeg">
+            <source media="(min-width: 601px)" srcset="images/workshop.jpeg">
+            <img loading="lazy" decoding="async" src="images/workshop.jpeg" alt="him" width="434" height="434" aria-hidden="true">
+        </picture>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">What is PlanterPots Australia?</span>
+            <h2 class="cs-title">About us</h2>
+            <p class="cs-text">
+                At PlanterPots, we’re passionate about helping people bring nature into their homes. What started as a simple love for indoor greenery has grown into a business dedicated to offering stylish, functional, and eco-friendly plant pots for every space.
+
+                <br><br>We believe that a good pot doesn’t just hold a plant — it enhances its beauty, complements your décor, and makes plant care easier. That’s why we carefully curate a wide range of pots in different sizes, materials, and styles to suit every type of plant lover — from beginners to seasoned plant parents.
+
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-1446">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Some of our products</span>
+                <h2 class="cs-title">Products Gallery</h2>
+            </div>
+        </div>
+        <!--Gallery-->
+        <div class="cs-gallery">
+            <!--Picture 1-->
+            <a href = "gallery/pot_gal1.jpeg" class="cs-image" data-fancybox="gallery">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="gallery/pot_gal1.jpeg">
+                    <source media="(min-width: 601px)" srcset="gallery/pot_gal1.jpeg">
+                    <img loading="lazy" decoding="async" src="gallery/pot_gal1.jpeg" data-fancybox="gallery" alt="gallery" width="640" height="640">
+                </picture>
+            </a>
+            <!--Picture 2-->
+            <a href = "gallery/pot_gal2.jpeg" class="cs-image" data-fancybox="gallery">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="gallery/pot_gal2.jpeg">
+                    <source media="(min-width: 601px)" srcset="gallery/pot_gal2.jpeg">
+                    <img loading="lazy" decoding="async" src="gallery/pot_gal2.jpeg" alt="gallery" width="640" height="640">
+                </picture>
+            </a>
+            <!--Picture 3-->
+            <a href = "gallery/pot_gal3.jpeg" class="cs-image" data-fancybox="gallery">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="gallery/pot_gal3.jpeg">
+                    <source media="(min-width: 601px)" srcset="gallery/pot_gal3.jpeg">
+                    <img loading="lazy" decoding="async" src="gallery/pot_gal3.jpeg" alt="gallery" width="640" height="640">
+                </picture>
+            </a>
+            <!--Picture 4-->
+            <a href = "gallery/pot_gal4.jpeg" class="cs-image" data-fancybox="gallery">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="gallery/pot_gal4.jpeg">
+                    <source media="(min-width: 601px)" srcset="gallery/pot_gal4.jpeg">
+                    <img loading="lazy" decoding="async" src="gallery/pot_gal4.jpeg" alt="gallery" width="640" height="640">
+                </picture>
+            </a>
+
+            <!--Picture 5-->
+            <a href = "gallery/pot_gal5.jpeg" class="cs-image" data-fancybox="gallery">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="gallery/pot_gal5.jpeg">
+                    <source media="(min-width: 601px)" srcset="gallery/pot_gal5.jpeg">
+                    <img loading="lazy" decoding="async" src="gallery/pot_gal5.jpeg" alt="gallery" width="640" height="640">
+                </picture>
+            </a>
+            <!--Picture 6-->
+            <a href = "gallery/pot_gal6.jpeg" class="cs-image" data-fancybox="gallery">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="gallery/pot_gal6.jpeg">
+                    <source media="(min-width: 601px)" srcset="gallery/pot_gal6.jpeg">
+                    <img loading="lazy" decoding="async" src="gallery/pot_gal6.jpeg" alt="gallery" width="640" height="640">
+                </picture>
+            </a>
+            <!--Picture 7-->
+            <a href = "gallery/pot_gal5.jpeg" class="cs-image" data-fancybox="gallery">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="gallery/pot_gal7.jpeg">
+                    <source media="(min-width: 601px)" srcset="gallery/pot_gal7.jpeg">
+                    <img loading="lazy" decoding="async" src="gallery/pot_gal7.jpeg" alt="gallery" width="640" height="640">
+                </picture>
+            </a>
+            <!--Picture 8-->
+            <a href = "gallery/pot_gal5.jpeg" class="cs-image" data-fancybox="gallery">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="gallery/pot_gal8.jpeg">
+                    <source media="(min-width: 601px)" srcset="gallery/pot_gal8.jpeg">
+                    <img loading="lazy" decoding="async" src="gallery/pot_gal8.jpeg" alt="gallery" width="640" height="640">
+                </picture>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-1394">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Subscribe for our Newsletter</h2>
+            <p class="cs-text">
+                Subscribe to our newsletter and get 30% off your first order. Be the first to know about our latest products, exclusive offers, and gardening tips.
+            </p>
+            <form class="cs-form" name="Contact Form" method="post">
+                <input class="cs-input" type="email" id="cs-email-1394" name="find-us" placeholder="Email Address">
+
+                <button class="cs-button-solid cs-submit" type="submit">Subscribe Now</button>
+
+            </form>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="images/backgroundGreen.jpeg">
+        <source media="(min-width: 601px)" srcset="images/backgroundGreen.jpeg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting10.jpg" alt="meeting" width="1920" height="486" aria-hidden="true">
+    </picture>
+</section>
+
+<button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-274">
+    <div class="cs-container">
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <a aria-label="go back to home" class="cs-logo" href="/index.html">
+                <!-- Remove the light class if you don't need the dark logo -->
+                <h1>
+                    PlanterPots
+                </h1>
+            </a>
+            <div class="cs-social">
+                <a class="cs-social-link" aria-label="visit google profile" href="">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg" alt="google" width="11" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit facebook profile" href="">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg" alt="facebook" width="6" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit instagram profile" href="">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg" alt="instagram" width="11" height="11">
+                </a>
+            </div>
+        </div>
+        <!-- Links -->
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Contact</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="tel:+61 405 104 934">+61 405 104 934</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="mailto:info@codestitch.com">pots@planterpots.com.au</a>
+            </li>
+        </ul>
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Address</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">127 Dromana Parade, Safety Beach, VIC, 3936</a>
+            </li>
+        </ul>
+        <!-- Contact Info -->
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Opening Hours</span>
+            </li>
+            <li class="cs-nav-li">
+                Tuesday, Thursday, Friday: 9am-6pm
+            </li>
+            <li class="cs-nav-li">
+                ​(closed for lunch 12pm-2pm)
+            </li>
+        </ul>
+    </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+
+
+
+</body>
+</html>
